@@ -12,5 +12,5 @@ refs.changeColorBut.addEventListener('click', handlerTargetButtonClick);
 
 function handlerTargetButtonClick() {
   refs.body.style.backgroundColor = getRandomHexColor();
-  refs.currentColor.textContent = getRandomHexColor();
+  refs.currentColor.textContent = refs.body.style.backgroundColor;
 }

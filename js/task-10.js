@@ -9,8 +9,15 @@ const refs = {
 };
 
 refs.createBut.addEventListener('click', createBoxes);
-refs.destroyeBut.addEventListener('click', destroyBoxes);
 
 function createBoxes(amount) {
-  amount === refs.amountOfElemets.value;
+  refs.amountOfElemets.value === amount;
+
+  const newElement = document.createElement('div');
+
+  newElement.style.width = '30px';
+  newElement.style.height = '30px';
+  newElement.style.backgroungColor = getRandomHexColor();
+  refs.containerForElements.insertAdjacentHTML('beforeend', newElement);
+  console.log(refs.containerForElements);
 }
